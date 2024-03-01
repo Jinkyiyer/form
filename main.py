@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import mysql.connector
 import os
+from app import app
 
 app = Flask(__name__)
 
@@ -138,7 +139,7 @@ def submit():
             return f"Error: {err}"
 
 
-from app import app
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
